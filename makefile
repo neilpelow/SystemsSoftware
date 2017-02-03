@@ -6,19 +6,19 @@ myprog : $(objects)
 	$(CC) -o areaProg $(objects) -lm
 
 main.o : main.c $(headers)
-	$(CC) -c main.c
+	$(CC) -g  -c main.c
 
 areaOfRectangle.o : areaOfRectangle.c
-	$(CC) -c areaOfRectangle.c
+	$(CC) -g -c areaOfRectangle.c
 
 areaOfSquare.o : areaOfSquare.c areaOfRectangle.c
-	$(CC) -c areaOfSquare.c
+	$(CC) -g -c areaOfSquare.c
 
 areaOfCircle.o : areaOfCircle.c
-	$(CC) -c areaOfCircle.c
+	$(CC) -g -c areaOfCircle.c
 
 area_of_triangle.o : area_of_triangle.c
-	$(CC) -c area_of_triangle.c -lm
+	$(CC) -g  -c area_of_triangle.c -lm
 
 clean:
 	rm areaProg $(objects)
